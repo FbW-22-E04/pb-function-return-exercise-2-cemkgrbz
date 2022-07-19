@@ -1,17 +1,32 @@
 // 1
 // Write a JavaScript function that accepts a string as a parameter and counts the number of vowels within the string.
+// function vowel_count(str1) {
+//   const vowelList = 'aeiouAEIOU';
+//   let vowelCount = 0; 
+//   for (let i = 0; i < str1.length; i++) {
+//     if (vowelList.indexOf(str1[i]) !== -1) {
+//       vowelCount += 1;
+//     }
+//   }
+//   return vowelCount
+
+// }
+
 function vowel_count(str1) {
   const vowelList = 'aeiouAEIOU';
   let vowelCount = 0; 
   for (let i = 0; i < str1.length; i++) {
-    if (vowelList.indexOf(str1[i]) !== -1) {
-      vowelCount += 1;
+    if (vowelList.includes(str1[i])) {
+      vowelCount++;
     }
   }
   return vowelCount
 
 }
+
+
 console.log(vowel_count("The quick brown fox"));
+console.log(vowel_count("aaaaaaaaaooooooooo"));
 
 //2
 // Write a JavaScript function that generates a string id (specified length) of random characters.
